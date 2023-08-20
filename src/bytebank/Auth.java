@@ -1,8 +1,8 @@
 package bytebank;
 
 public class Auth {
-    public boolean autenticar(String clave, Gerente gerente){
-        boolean puedeIniciarSesion = gerente.iniciarSesion(clave);
+    public boolean autenticar(String clave, InterfazPuedeAutenticar usuarioAutenticable){
+        boolean puedeIniciarSesion = usuarioAutenticable.iniciarSesion(clave);
 
         if (puedeIniciarSesion){
             System.out.println("Puede iniciar sesión");

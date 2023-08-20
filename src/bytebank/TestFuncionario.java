@@ -7,5 +7,13 @@ public class TestFuncionario {
         gerente.setClave("00010");
         Auth auth = new Auth();
         auth.autenticar("0000", gerente);
+
+        Admin admin = new Admin();
+        admin.setClave("1111");
+        auth.autenticar("1111", admin);
+
+        Cliente cliente = new Cliente();
+        cliente.setClave("2222");
+        auth.autenticar("2222", cliente);
     }
 }
